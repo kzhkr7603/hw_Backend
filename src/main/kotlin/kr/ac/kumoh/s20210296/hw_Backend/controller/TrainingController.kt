@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/Training")
-@CrossOrigin(origins = ["http://localhost:3001"])
+@CrossOrigin(origins = ["http://localhost:3001/"])
 class TrainingController(private val service: TrainingService) {
     @PostMapping
     fun addTraining(@RequestBody training: Training): Training = service.addTraining(training)
