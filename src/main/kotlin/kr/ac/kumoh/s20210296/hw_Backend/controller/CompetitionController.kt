@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/Competition")
-@CrossOrigin(origins = ["https://guryongpo-fs.netlify.app"])
+@CrossOrigin(origins = ["http://localhost:3000"])
 class CompetitionController(private val service:CompetitionService) {
     @PostMapping
     fun addCompetition(@RequestBody competition: Competition): Competition = service.addCompetition(competition)
